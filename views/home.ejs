@@ -1,0 +1,49 @@
+
+<%- include('./partials/nav') %>
+
+    <h1><%= title %></h1>
+
+    <!-- render msg from locals object in server.js -->
+    
+    <p><%= msg %> <%= player.name %></p>
+
+    <ul>
+    <% inventory.forEach(function(item, index){ %>
+        <a href="/<%= index %>">
+        <li>
+            <%= index %> <br/>
+            <%= item.name %>: <%= item.qty %>
+        </li>
+        </a>
+    <% }) %>    
+    </ul>
+    
+    <br />
+    <br />
+    <br />
+    <hr />
+
+    <!-- Scriplet tags to use JS -->
+    <% if (false){  %>
+        <p>This shows up!</p>
+    <% } else { %>
+        <p>This one might show up?</p>
+    <% }  %>
+    
+   
+    <%= user %>
+
+    <p>2 plus 2 is <%= 2 + 2 %> </p>
+    
+    
+    <% let showMessage = false %>
+
+    <% if (showMessage === true){ %>
+        <p>This is a dynamic message!</p>
+    <% } %>
+
+      <%  let favoriteNumber = 7 %>
+      <p>My favorite number is <%= favoriteNumber %></p>
+
+</body>
+</html>
